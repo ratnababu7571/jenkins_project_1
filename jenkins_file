@@ -1,1 +1,20 @@
 
+pipeline{
+    agent any
+        stages{
+            stage('checkout'){
+                steps{
+                    checkout scmGit(branches: [[name: '*/main']], extensions: [], 
+                    userRemoteConfigs: [[credentialsId: 'git', url: 'https://github.com/ratnababu7571/jenkins_project_1.git']])
+                }
+            }
+            stage('build Json data'){
+                steps{
+                    echo 'print json data'
+                }
+                
+
+            }
+        }
+
+}
