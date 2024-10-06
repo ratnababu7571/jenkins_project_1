@@ -10,8 +10,9 @@ pipeline{
             }
             stage('build Json data'){
                 steps{ 
+                    git branch :"main" , url:'https://github.com/ratnababu7571/jenkins_project_1.git'
                     echo 'print json data'
-                    python python.py 
+                    sh 'python python.py' 
                 }
             }
         }
