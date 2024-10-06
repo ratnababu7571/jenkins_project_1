@@ -11,10 +11,8 @@ pipeline{
             stage('build Json data'){
                 steps{
                     echo 'print json data'
-                    ./python.py
+                    echo "./python.py"
                 }
-                
-
             }
         }
 }
