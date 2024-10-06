@@ -10,12 +10,5 @@ weather_params = {
 response = requests.get(endpoint,weather_params)
 response_1=response.raise_for_status
 data=response.json()
-
-flag = False
-data_id=data["list"][0]["weather"][0]["id"]
-for value in data["list"]:
-    id_value=value["weather"][0]["id"]
-    if id_value <= 800:
-        flag=True
-if flag:
- print("Bring an umberalla")
+print(data)
+ 
