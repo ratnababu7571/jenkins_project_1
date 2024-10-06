@@ -9,9 +9,11 @@ pipeline{
                 }
             }
             stage('build Json data'){
-                steps{
+                steps{   
+                    sh 
                     echo 'print json data'
-                    echo "./python.py"
+                    chmod 777 python.py
+                    ./python.py
                 }
             }
         }
