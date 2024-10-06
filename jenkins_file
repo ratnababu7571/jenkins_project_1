@@ -7,7 +7,6 @@ pipeline{
                     checkout scmGit(branches: [[name: '*/main']], extensions: [], 
                     userRemoteConfigs: [[credentialsId: 'git', url: 'https://github.com/ratnababu7571/jenkins_project_1.git']])
                 }
-                echo "You are here"
             }
             stage('build Json data'){
                 steps{
@@ -18,5 +17,4 @@ pipeline{
 
             }
         }
-
 }
