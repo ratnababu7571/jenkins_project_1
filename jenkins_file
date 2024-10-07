@@ -1,5 +1,5 @@
 
-pipeline{
+pipeline{`
     agent any
         stages{
             stage('checkout'){
@@ -10,7 +10,6 @@ pipeline{
             }
             stage('build Json data'){
                 steps{ 
-                    git branch :"main" , url:'https://github.com/ratnababu7571/jenkins_project_1.git'
                     echo 'print json data'
                     sh 'python python.py' 
                 }
